@@ -1,10 +1,14 @@
 import './App.css';
-import { Greet } from "./components/Greet"
+import { UserContextProvider } from './components/context/UserContext';
+import { User } from './components/context/User';
 
 function App() {
+  
   return (
     <div className="App">
-      <Greet name="Zomita" messageCount={20} isLoggedIn={false}/>
+      <UserContextProvider>
+        <User/>
+      </UserContextProvider>
     </div>
   );
 }
